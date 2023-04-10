@@ -1,10 +1,11 @@
 const path = require("path");
 const dev = process.env.NODE_ENV == "development";
 const liveServer = require("live-server");
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 if (dev) {
   liveServer.start({
-    root: "./",
+    // root: "./",
     file: "index.html",
   });
 }
@@ -13,6 +14,7 @@ module.exports = {
   entry: "./src/index.tsx",
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
+    plugins: [new TsconfigPathsPlugin({/* options: see below */})]
   },
   module: {
     rules: [

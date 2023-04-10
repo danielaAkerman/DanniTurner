@@ -5,7 +5,9 @@ export function DTbutton(props) {
 
   return (
     <div>
-      <button>{props.children}</button>
+      <button style={{ backgroundColor: "#FCA14C", border: "none" }}>
+        {props.children}
+      </button>
     </div>
   );
 }

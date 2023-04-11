@@ -1,21 +1,42 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export function MisTurnos() {
+  const navigate = useNavigate();
+  function irAModificarTurno(e) {
+    // obtener el id del turno
+    navigate("/nuevo-turno", { replace: true });
+  }
+
   return (
     <div>
       <h1>MisTurnos</h1>
       <ul>
         <li>
-          Mis Turnos 1<button>Cosa</button>
-          <button>Otra cosa</button>
+          Día: Martes 11/04/2023 Horario: 16:00
+          <div>
+            <button>Descargar Comprobante</button>
+
+            <button onClick={irAModificarTurno}>Modificar Turno</button>
+
+            <button>Cancelar Turno</button>
+          </div>
         </li>
         <li>
-          Mis Turnos 2<button>Cosa</button>
-          <button>Otra cosa</button>
+          Día: Martes 11/04/2023 Horario: 16:00
+          <div>
+            <button>Descargar Comprobante</button>
+            <button>Modificar Turno</button>
+            <button>Cancelar Turno</button>
+          </div>
         </li>
         <li>
-          Mis Turnos 3<button>Cosa</button>
-          <button>Otra cosa</button>
+          Día: Martes 11/04/2023 Horario: 16:00
+          <div>
+            <button>Descargar Comprobante</button>
+            <button>Modificar Turno</button>
+            <button>Cancelar Turno</button>
+          </div>
         </li>
       </ul>
     </div>

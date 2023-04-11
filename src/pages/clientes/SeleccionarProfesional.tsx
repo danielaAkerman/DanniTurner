@@ -6,21 +6,24 @@ export function SeleccionarProfesional() {
     <div>
       <h1>SeleccionarProfesional</h1>
       <ul>
-        <Link to={"/seleccionar-fecha"}>
-          <li>
-            Profesional 1<button>Seleccionar</button>
-          </li>
-        </Link>
-        <Link to={"/seleccionar-fecha"}>
-          <li>
-            Profesional 2<button>Seleccionar</button>
-          </li>
-        </Link>
-        <Link to={"/seleccionar-fecha"}>
-          <li>
-            Profesional 3<button>Seleccionar</button>
-          </li>
-        </Link>
+        <li>
+          Profesional 1
+          <Link to={"/seleccionar-turno"}>
+            <button>Seleccionar</button>
+          </Link>
+        </li>
+        <li>
+          Profesional 2
+          <Link to={"/seleccionar-turno"}>
+            <button>Seleccionar</button>
+          </Link>
+        </li>
+        <li>
+          Profesional 3
+          <Link to={"/seleccionar-turno"}>
+            <button>Seleccionar</button>
+          </Link>
+        </li>
       </ul>
     </div>
   );

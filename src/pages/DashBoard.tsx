@@ -6,15 +6,15 @@ export function DashBoard() {
     <div>
       <h1>Dashboard</h1>
       <Link to={"/clientes"}>
-        <button>Reservas (At. al Cliente)</button>
+        <button>Clientes</button>
       </Link>
       <br />
       <Link to={"/prestadores"}>
-        <button>Gestión de agendas (Prestadores)</button>
+        <button>Prestaciones</button>
       </Link>
       <br />
       <Link to={"/usuarios"}>
-        <button>Gestión de usuarios (Que administran este sistema)</button>
+        <button>Usuarios de sistema</button>
       </Link>
     </div>
   );

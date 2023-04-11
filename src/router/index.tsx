@@ -1,11 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { App } from "pages/App";
-import { Page2 } from "pages/page2";
 import { Layout } from "components/Layout";
 import { Otro } from "pages/Otro";
 import { Search } from "pages/Search";
-import { SearchCliente } from "pages/clientes/SearchCliente";
+import { Clientes } from "pages/clientes/Clientes";
 import { Turnos } from "pages/clientes/Turnos";
 import { NuevoTurno } from "pages/clientes/NuevoTurno";
 import { MisTurnos } from "pages/clientes/MisTurnos";
@@ -15,6 +13,8 @@ import { SeleccionarTurno } from "pages/clientes/SeleccionarTurno";
 import { ConfirmarTurno } from "pages/clientes/ConfirmarTurno";
 import { LoginPage } from "pages/LoginPage";
 import { DashBoard } from "pages/DashBoard";
+import { BuscarCliente } from "pages/clientes/BuscarCliente";
+import { NuevoCliente } from "pages/clientes/NuevoCliente";
 
 function AppRoutes() {
   return (
@@ -24,7 +24,9 @@ function AppRoutes() {
 
         <Route path="/dashboard" element={<DashBoard />} />
 
-        <Route path="/clientes" element={<SearchCliente />} />
+        <Route path="/clientes" element={<Clientes />} />
+        <Route path="/buscar-cliente" element={<BuscarCliente />} />
+        <Route path="/nuevo-cliente" element={<NuevoCliente />} />
         <Route path="/turnos" element={<Turnos />} />
         <Route path="/nuevo-turno" element={<NuevoTurno />} />
         <Route path="/mis-turnos" element={<MisTurnos />} />

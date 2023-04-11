@@ -5,7 +5,16 @@ export function LoginPage() {
   return (
     <div>
       <h1>Login</h1>
-      <input type="text" />
+      <label>
+        <span>Usuario:</span>
+        <input type="text" />
+      </label>
+      <br />
+      <label>
+        <span>Constraseña:</span>
+        <input type="password" />
+      </label>
+      <br />
       <Link to={"dashboard"}>
         <button>Ingresar</button>
       </Link>

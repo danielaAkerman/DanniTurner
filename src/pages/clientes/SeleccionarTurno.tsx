@@ -6,21 +6,24 @@ export function SeleccionarTurno() {
     <div>
       <h1>SeleccionarTurno</h1>
       <ul>
-        <Link to={"/confirmar-turno"}>
-          <li>
-            turno 1<button>Selec</button>
-          </li>
-        </Link>
-        <Link to={"/confirmar-turno"}>
-          <li>
-            turno 2<button>Selec</button>
-          </li>
-        </Link>
-        <Link to={"/confirmar-turno"}>
-          <li>
-            turno 3<button>Selec</button>
-          </li>
-        </Link>
+        <li>
+          turno 1
+          <Link to={"/confirmar-turno"}>
+            <button>Selec</button>
+          </Link>
+        </li>
+        <li>
+          turno 2
+          <Link to={"/confirmar-turno"}>
+            <button>Selec</button>
+          </Link>
+        </li>
+        <li>
+          turno 3
+          <Link to={"/confirmar-turno"}>
+            <button>Selec</button>
+          </Link>
+        </li>
       </ul>
     </div>
   );

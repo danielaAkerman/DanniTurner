@@ -6,24 +6,36 @@ export function NuevoTurno() {
     <div>
       <h1>NuevoTurno</h1>
       <ul>
-        <Link to={"/seleccionar-profesional"}>
-          <li>
-            Propuesta 1<button>Cosa</button>
+        <li>
+          Propuesta 1
+          <Link to={"/seleccionar-profesional"}>
+            <button>Cosa</button>
+          </Link>
+          <Link to={"/seleccionar-profesional"}>
             <button>Otra cosa</button>
-          </li>
-        </Link>
-        <Link to={"/seleccionar-profesional"}>
-          <li>
-            Propuesta 2<button>Cosa</button>
+          </Link>
+        </li>
+        
+        <li>
+          Propuesta 2
+          <Link to={"/seleccionar-profesional"}>
+            <button>Cosa</button>
+          </Link>
+          <Link to={"/seleccionar-profesional"}>
             <button>Otra cosa</button>
-          </li>
-        </Link>
-        <Link to={"/seleccionar-profesional"}>
-          <li>
-            Propuesta 3<button>Cosa</button>
+          </Link>
+        </li>
+        
+        <li>
+          Propuesta 3
+          <Link to={"/seleccionar-profesional"}>
+            <button>Cosa</button>
+          </Link>
+          <Link to={"/seleccionar-profesional"}>
             <button>Otra cosa</button>
-          </li>
-        </Link>
+          </Link>
+        </li>
+        
       </ul>
     </div>
   );

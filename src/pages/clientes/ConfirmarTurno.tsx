@@ -1,9 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export function ConfirmarTurno() {
+  const navigate = useNavigate();
   function confirmarSeleccion() {
-    console.log("Reserva confirmada, POP UP EXITO");
+    // LOGICA PARA RESERVAR EL TURNO DEFINITIVAMENTE
+
+    navigate("/turno-reservado", { replace: true });
   }
 
   function cancelarSeleccion() {
@@ -18,7 +21,7 @@ export function ConfirmarTurno() {
       <p>Hora: 16:30</p>
       <p>Propuesta: Obstetricia</p>
       <p>Prestador: Cesar Izquierdo</p>
-      <button onClick={confirmarSeleccion}>Confirmar Reserva</button>
+      <button onClick={confirmarSeleccion}>Confirmar Turno</button>
       <Link to={"/turnos"}>
         <button onClick={cancelarSeleccion}>Cancelar y volver a Turnos</button>
       </Link>

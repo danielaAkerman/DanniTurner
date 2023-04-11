@@ -7,19 +7,19 @@ export function SeleccionarTurno() {
       <h1>SeleccionarTurno</h1>
       <ul>
         <li>
-          turno 1
+          Día: Martes 11/04/2023 Horario: 16:00
           <Link to={"/confirmar-turno"}>
             <button>Selec</button>
           </Link>
         </li>
         <li>
-          turno 2
+          Día: Miércoles 12/04/2023 Horario: 16:00
           <Link to={"/confirmar-turno"}>
             <button>Selec</button>
           </Link>
         </li>
         <li>
-          turno 3
+          Día: Jueves 13/04/2023 Horario: 16:00
           <Link to={"/confirmar-turno"}>
             <button>Selec</button>
           </Link>

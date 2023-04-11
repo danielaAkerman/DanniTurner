@@ -10,6 +10,9 @@ export function BuscarCliente() {
     const dniCliente = e.target.dni.value || "";
     console.log("CLIENTE: ", apellidoCliente, dniCliente);
 
+
+    // LOGICA PARA BUSCAR UN CLIENTE
+    
     navigate("/turnos", { replace: true });
   }
 

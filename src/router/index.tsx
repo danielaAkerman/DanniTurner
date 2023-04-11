@@ -15,6 +15,7 @@ import { LoginPage } from "pages/LoginPage";
 import { DashBoard } from "pages/DashBoard";
 import { BuscarCliente } from "pages/clientes/BuscarCliente";
 import { NuevoCliente } from "pages/clientes/NuevoCliente";
+import { TurnoReservado } from "pages/clientes/TurnoReservado";
 
 function AppRoutes() {
   return (
@@ -37,6 +38,7 @@ function AppRoutes() {
         <Route path="/seleccionar-fecha" element={<SeleccionarFecha />} />
         <Route path="/seleccionar-turno" element={<SeleccionarTurno />} />
         <Route path="/confirmar-turno" element={<ConfirmarTurno />} />
+        <Route path="/turno-reservado" element={<TurnoReservado />} />
 
         <Route path="/agendas" element={<Otro />} />
         <Route path="/usuarios" element={<Otro />} />

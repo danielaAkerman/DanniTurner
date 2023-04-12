@@ -5,7 +5,7 @@ import { Otro } from "pages/Otro";
 import { Search } from "pages/Search";
 import { Clientes } from "pages/clientes/Clientes";
 import { Turnos } from "pages/clientes/Turnos";
-import { NuevoTurno } from "pages/clientes/NuevoTurno";
+import { Propuestas } from "pages/clientes/Propuestas";
 import { MisTurnos } from "pages/clientes/MisTurnos";
 import { SeleccionarProfesional } from "pages/clientes/SeleccionarProfesional";
 import { SeleccionarFecha } from "pages/clientes/SeleccionarFecha";
@@ -16,6 +16,7 @@ import { DashBoard } from "pages/DashBoard";
 import { BuscarCliente } from "pages/clientes/BuscarCliente";
 import { NuevoCliente } from "pages/clientes/NuevoCliente";
 import { TurnoReservado } from "pages/clientes/TurnoReservado";
+import { Form } from "Form";
 
 function AppRoutes() {
   return (
@@ -29,7 +30,7 @@ function AppRoutes() {
         <Route path="/buscar-cliente" element={<BuscarCliente />} />
         <Route path="/nuevo-cliente" element={<NuevoCliente />} />
         <Route path="/turnos" element={<Turnos />} />
-        <Route path="/nuevo-turno" element={<NuevoTurno />} />
+        <Route path="/propuestas" element={<Propuestas />} />
         <Route path="/mis-turnos" element={<MisTurnos />} />
         <Route
           path="/seleccionar-profesional"
@@ -45,6 +46,7 @@ function AppRoutes() {
       </Route>
       <Route path="/otro" element={<Otro />} />
       <Route path="/search/:busqueda" element={<Search />} />
+      <Route path="/form" element={<Form />} />
     </Routes>
   );
 }

@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export function NuevoTurno() {
+export function Propuestas() {
   return (
     <div>
-      <h1>NuevoTurno</h1>
+      <h1>Seleccione la propuesta</h1>
       <ul>
         <li>
-          Propuesta 1
+          Cardiología
           <Link to={"/seleccionar-profesional"}>
             <button>Cosa</button>
           </Link>
@@ -17,7 +17,7 @@ export function NuevoTurno() {
         </li>
         
         <li>
-          Propuesta 2
+          Pedagogía
           <Link to={"/seleccionar-profesional"}>
             <button>Cosa</button>
           </Link>
@@ -27,7 +27,7 @@ export function NuevoTurno() {
         </li>
         
         <li>
-          Propuesta 3
+          Ginecología
           <Link to={"/seleccionar-profesional"}>
             <button>Cosa</button>
           </Link>

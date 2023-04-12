@@ -6,7 +6,7 @@ export function DashBoard() {
     <div>
       <h1>Dashboard</h1>
       <Link to={"/clientes"}>
-        <button>Clientes</button>
+        <button>Atención al Cliente</button>
       </Link>
       <br />
       <Link to={"/prestadores"}>

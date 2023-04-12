@@ -21,8 +21,14 @@ export function ConfirmarTurno() {
       <p>Hora: 16:30</p>
       <p>Propuesta: Obstetricia</p>
       <p>Prestador: Cesar Izquierdo</p>
-      <p>Si se tratara de una MODIFICACIÓN:</p>
-      <p>Recuerde que, con esta confirmación, el turno ksjdnfsdjf quedará sin efecto</p>
+      <div style={{ border: "solid green 1px" }}>
+        <p>Si se tratara de una MODIFICACIÓN:</p>
+        <p>
+          Recuerde que, con esta confirmación, el turno ksjdnfsdjf quedará sin
+          efecto
+        </p>
+      </div>
+      <br />
       <button onClick={confirmarSeleccion}>Confirmar Turno</button>
       <Link to={"/turnos"}>
         <button onClick={cancelarSeleccion}>Deshacer y volver a Turnos</button>

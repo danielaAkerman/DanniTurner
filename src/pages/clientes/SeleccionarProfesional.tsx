@@ -7,19 +7,19 @@ export function SeleccionarProfesional() {
       <h1>SeleccionarProfesional</h1>
       <ul>
         <li>
-          Profesional 1
+          Lopez, María Eugenia
           <Link to={"/seleccionar-turno"}>
             <button>Seleccionar</button>
           </Link>
         </li>
         <li>
-          Profesional 2
+          Martinez, Laura
           <Link to={"/seleccionar-turno"}>
             <button>Seleccionar</button>
           </Link>
         </li>
         <li>
-          Profesional 3
+          Zamboni, Macarena
           <Link to={"/seleccionar-turno"}>
             <button>Seleccionar</button>
           </Link>

@@ -8,7 +8,7 @@ export function ClienteSeleccionado() {
       <div
         style={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: "column",
           alignItems: "center",
           justifyContent:"center",
           gap: 10
@@ -19,6 +19,9 @@ export function ClienteSeleccionado() {
         </Link>
         <button className="btn btn-primary">VER TURNOS</button>
         <button className="btn btn-primary">DATOS PERSONALES</button>
+        <Link to={"/dashboard"}>
+          <button className="btn btn-primary">VOLVER AL INICIO</button>
+        </Link>
       </div>
       <div id="lista-clientes"></div>
     </div>

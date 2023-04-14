@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { jsPDF } from "jspdf";
 
 export function DetallesTurno() {
   const navigate = useNavigate();
@@ -8,6 +9,11 @@ export function DetallesTurno() {
   function turnoConfirmado() {
     console.log("SE DESCARGA UN COMPROBANTE");
     // LOGICA RESERVA EN DB
+
+    // var doc = new jsPDF();
+    // doc.text("Detalles", 1, 1)
+    // doc.save("a4.pdf");
+
     navigate("/cliente/Akerman", { replace: true });
   }
   function procesoCancelado() {

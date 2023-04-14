@@ -1,7 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function DetallesTurno() {
+  const navigate = useNavigate();
+
+  function turnoConfirmado() {
+    console.log("SE DESCARGA UN COMPROBANTE");
+    // LOGICA RESERVA EN DB
+    navigate("/cliente/Akerman", { replace: true });
+  }
+  function procesoCancelado() {
+    navigate("/cliente/Akerman", { replace: true });
+  }
+
   return (
     <div>
       <div className="accordion accordion-flush" id="accordionFlushExample">
@@ -15,7 +27,7 @@ export function DetallesTurno() {
               aria-expanded="false"
               aria-controls="flush-collapseOne"
             >
-              Seleccionar Especialidad (Propuesta)
+              Seleccionar Especialidad (Propuesta, Actividad, Recorrido...)
             </button>
           </h2>
           <div
@@ -44,7 +56,7 @@ export function DetallesTurno() {
               aria-expanded="false"
               aria-controls="flush-collapseTwo"
             >
-              Seleccionar Prestador (Médico)
+              Seleccionar Médico (Profesional, Guía, Prestador...)
             </button>
           </h2>
           <div
@@ -73,7 +85,7 @@ export function DetallesTurno() {
               aria-expanded="false"
               aria-controls="flush-collapseThree"
             >
-              Seleccionar Turno
+              Seleccionar Fecha y Hora
             </button>
           </h2>
           <div
@@ -130,6 +142,8 @@ export function DetallesTurno() {
               <p>Hora: 16:30</p>
               <p>Propuesta: Obstetricia</p>
               <p>Prestador: Cesar Izquierdo</p>
+              <p>Paciente: Daniela Akerman 7234682</p>
+
               {/* <div style={{ border: "solid green 1px" }}>
                 <p>Si se tratara de una MODIFICACIÓN:</p>
                 <p>
@@ -137,19 +151,24 @@ export function DetallesTurno() {
                   quedará sin efecto
                 </p>
               </div> */}
-
             </div>
 
             <div className="modal-footer">
               <button
+                onClick={turnoConfirmado}
                 type="button"
                 className="btn btn-primary"
                 data-bs-dismiss="modal"
               >
                 Confirmar
               </button>
-              <button type="button" className="btn btn-outline-success">
-                Deshacer y Volver a Mis Turnos
+              <button
+                onClick={procesoCancelado}
+                type="button"
+                className="btn btn-outline-success"
+                data-bs-dismiss="modal"
+              >
+                Deshacer Selección
               </button>
             </div>
           </div>

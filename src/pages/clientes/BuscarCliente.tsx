@@ -12,33 +12,96 @@ export function BuscarCliente() {
 
     // LOGICA PARA BUSCAR UN CLIENTE
 
-    // document.querySelector("#lista-clientes").innerHTML=`Akerman Daniela 27834872
-    // ${
-    //   <Link to={"/turnos"}>"Seleccionar"</Link>
-    // }`
+    document.querySelector(
+      "#lista-clientes"
+    ).innerHTML = `
 
-    navigate("/turnos", { replace: true });
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">DNI</th>
+      <th scope="col"></th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Akerman</td>
+      <td>Daniela</td>
+      <td>2342342</td>
+      <td><button className="btn btn-primary" id="turno">IR</button></td>
+
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Akerman</td>
+      <td>Lucía</td>
+      <td>4534534</td>
+      <td><button className="btn btn-primary" id="turno">IR</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Akerman</td>
+      <td>Viviana</td>
+      <td>45645645</td>
+      <td><button className="btn btn-primary" id="turno">IR</button></td>
+    </tr>
+  </tbody>
+</table>
+
+   `;
+    //  ${<Link to={"/turnos"}>"Seleccionar"</Link>}
+    document.querySelector("#turno")?.addEventListener("click", () => {
+      navigate("/cliente/Akerman", { replace: true });
+      console.log("clikeado");
+    });
   }
 
   return (
     <div>
-      <h1>BuscarCliente</h1>
-      <form onSubmit={buscarClienteForm}>
-        <p>Sólo un campo es requerido</p>
-        <label>
-          <span>Apellido</span>
-          <input type="text" name="apellido" />
-        </label>
-        <br />
-        <br />
-        <label>
-          <span>DNI</span>
-          <input type="text" name="dni" />
-        </label>
-        <br />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <h1>Buscar Cliente</h1>
 
-        <button>BUSCAR</button>
-      </form>
+        <p>Sólo un campo es requerido</p>
+
+        <form onSubmit={buscarClienteForm}>
+          <div className="mb-3">
+            <label className="form-label">
+              <span>Apellido</span>
+              <input
+                type="text"
+                name="apellido"
+                className="form-control"
+                aria-describedby=""
+              />
+            </label>
+          </div>
+          <div className="mb-3">
+            <label className="form-label">
+              <span>DNI</span>
+              <input
+                type="text"
+                name="dni"
+                className="form-control"
+                aria-describedby=""
+              />
+            </label>
+          </div>
+          <br />
+
+          <button className="btn btn-primary">BUSCAR</button>
+        </form>
+      </div>
       <div id="lista-clientes"></div>
     </div>
   );

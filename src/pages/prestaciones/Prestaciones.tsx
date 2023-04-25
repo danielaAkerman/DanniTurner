@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 export function Prestaciones() {
  
 
-  return (<div>
+  return (<div style={{display:"flex", flexDirection:"column", gap:10}}>
     <Link to={"sucursales"}>
     <button className="btn btn-primary">Sucursales</button>
     </Link>

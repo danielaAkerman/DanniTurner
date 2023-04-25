@@ -17,6 +17,8 @@ import { Sucursales } from "pages/prestaciones/Sucursales";
 import { Propuestas } from "pages/prestaciones/Propuestas";
 import { Prestadores } from "pages/prestaciones/Prestadores";
 import { GenerarTurnos } from "pages/prestaciones/GenerarTurnos";
+import { NuevaSucursal } from "pages/prestaciones/NuevaSucursal";
+import { NuevaPropuesta } from "pages/prestaciones/NuevaPropuesta";
 
 function AppRoutes() {
   return (
@@ -35,10 +37,22 @@ function AppRoutes() {
 
         <Route path="/prestaciones" element={<Prestaciones />} />
         <Route path="/prestaciones/sucursales" element={<Sucursales />} />
-        <Route path="/prestaciones/propuestas" element={<Propuestas />} />
-        <Route path="/prestaciones/prestadores" element={<Prestadores />} />
-        <Route path="/prestaciones/generar-turnos" element={<GenerarTurnos />} />
+        <Route
+          path="/prestaciones/sucursales/nueva-sucursal"
+          element={<NuevaSucursal />}
+        />
 
+        <Route path="/prestaciones/propuestas" element={<Propuestas />} />
+        <Route
+          path="/prestaciones/propuestas/nueva-propuesta"
+          element={<NuevaPropuesta />}
+        />
+
+        <Route path="/prestaciones/prestadores" element={<Prestadores />} />
+        <Route
+          path="/prestaciones/generar-turnos"
+          element={<GenerarTurnos />}
+        />
 
         <Route path="/agendas" element={<Otro />} />
         <Route path="/usuarios" element={<Otro />} />

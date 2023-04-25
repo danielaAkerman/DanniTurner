@@ -90,6 +90,12 @@ export function DatosPrestador() {
             <input name="horarios" />
           </label>
 
+          <label>
+            <span>Estado</span>
+            <br />
+            <input name="estado" />
+          </label>
+
           <br />
         </fieldset>
       </form>

@@ -21,6 +21,10 @@ export function Prestaciones() {
     <button className="btn btn-primary">Generar Turnos</button>
     </Link>
 
+    <Link to={"/dashboard"}>
+    <button className="btn btn-primary">Volver</button>
+    </Link>
+
 
   </div>
   );

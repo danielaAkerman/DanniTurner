@@ -13,12 +13,16 @@ import { ClienteSeleccionado } from "pages/clientes/ClienteSeleccionado";
 import { VerTurnos } from "pages/clientes/VerTurnos";
 import { DatosCliente } from "pages/clientes/DatosCliente";
 import { Prestaciones } from "pages/prestaciones/Prestaciones";
-import { Sucursales } from "pages/prestaciones/Sucursales";
-import { Propuestas } from "pages/prestaciones/Propuestas";
-import { Prestadores } from "pages/prestaciones/Prestadores";
-import { GenerarTurnos } from "pages/prestaciones/GenerarTurnos";
-import { NuevaSucursal } from "pages/prestaciones/NuevaSucursal";
-import { NuevaPropuesta } from "pages/prestaciones/NuevaPropuesta";
+import { Sucursales } from "pages/prestaciones/sucursales/Sucursales";
+import { Propuestas } from "pages/prestaciones/propuestas/Propuestas";
+import { Prestadores } from "pages/prestaciones/prestadores/Prestadores";
+import { GenerarTurnos } from "pages/prestaciones/generar-turnos/GenerarTurnos";
+import { NuevaSucursal } from "pages/prestaciones/sucursales/NuevaSucursal";
+import { NuevaPropuesta } from "pages/prestaciones/propuestas/NuevaPropuesta";
+import { VerPrestador } from "pages/prestaciones/prestadores/VerPrestador";
+import { NuevoPrestador } from "pages/prestaciones/prestadores/NuevoPrestador";
+import { DatosPrestador } from "pages/prestaciones/prestadores/DatosPrestador";
+import { AgendaPrestador } from "pages/prestaciones/prestadores/AgendaPrestador";
 
 function AppRoutes() {
   return (
@@ -49,6 +53,12 @@ function AppRoutes() {
         />
 
         <Route path="/prestaciones/prestadores" element={<Prestadores />} />
+        <Route path="/prestaciones/prestadores/ver-prestador/:prestador" element={<VerPrestador />} />
+        <Route path="/prestaciones/prestadores/ver-prestador/datos/:prestador" element={<DatosPrestador />} />
+        <Route path="/prestaciones/prestadores/nuevo-prestador" element={<NuevoPrestador />} />
+        <Route path="/prestaciones/prestadores/ver-prestador/agenda/:prestador" element={<AgendaPrestador />} />
+
+
         <Route
           path="/prestaciones/generar-turnos"
           element={<GenerarTurnos />}

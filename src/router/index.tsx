@@ -10,6 +10,13 @@ import { NuevoCliente } from "pages/clientes/NuevoCliente";
 import { Form } from "Form";
 import { DetallesTurno } from "pages/clientes/DetallesTurno";
 import { ClienteSeleccionado } from "pages/clientes/ClienteSeleccionado";
+import { VerTurnos } from "pages/clientes/VerTurnos";
+import { DatosCliente } from "pages/clientes/DatosCliente";
+import { Prestaciones } from "pages/prestaciones/Prestaciones";
+import { Sucursales } from "pages/prestaciones/Sucursales";
+import { Propuestas } from "pages/prestaciones/Propuestas";
+import { Prestadores } from "pages/prestaciones/Prestadores";
+import { GenerarTurnos } from "pages/prestaciones/GenerarTurnos";
 
 function AppRoutes() {
   return (
@@ -23,6 +30,14 @@ function AppRoutes() {
         <Route path="/cliente/:cliente" element={<ClienteSeleccionado />} />
         <Route path="/nuevo-cliente" element={<NuevoCliente />} />
         <Route path="/detalles-turno" element={<DetallesTurno />} />
+        <Route path="/ver-turnos" element={<VerTurnos />} />
+        <Route path="/datos-cliente" element={<DatosCliente />} />
+
+        <Route path="/prestaciones" element={<Prestaciones />} />
+        <Route path="/prestaciones/sucursales" element={<Sucursales />} />
+        <Route path="/prestaciones/propuestas" element={<Propuestas />} />
+        <Route path="/prestaciones/prestadores" element={<Prestadores />} />
+        <Route path="/prestaciones/generar-turnos" element={<GenerarTurnos />} />
 
 
         <Route path="/agendas" element={<Otro />} />

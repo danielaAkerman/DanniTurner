@@ -1,18 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { jsPDF } from "jspdf";
+// const sgMail = require("@sendgrid/mail");
 
 export function DetallesTurno() {
   const navigate = useNavigate();
 
   function turnoConfirmado() {
-    console.log("SE DESCARGA UN COMPROBANTE");
     // LOGICA RESERVA EN DB
 
-    // var doc = new jsPDF();
-    // doc.text("Detalles", 1, 1)
-    // doc.save("a4.pdf");
+    //     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    //     const msg = {
+    //       to: "",
+    //       from: "daniela.akerman@outlook.com",
+    //       subject: "",
+    //       text: `Hola!`,
+    //       html: `<strong>Turno Reservado</strong>
+    // Se reservó tu turno....
+    //     `,
+    //     };
+    //     sgMail
+    //       .send(msg)
+    //       .then(() => {
+    //         console.log(`Reporte enviado `);
+    //         return { message: "Reporte enviado" };
+    //       })
+    //       .catch((error) => {
+    //         console.error(error);
+    //         return { message: "Error" };
+    //       });
 
     navigate("/cliente/Akerman", { replace: true });
   }
@@ -120,6 +136,14 @@ export function DetallesTurno() {
         data-bs-target="#staticBackdrop"
       >
         Confirmar Selección
+      </button>
+      <br />
+      <button
+        onClick={procesoCancelado}
+        type="button"
+        className="btn btn-outline-success"
+      >
+        Deshacer Selección
       </button>
 
       <div

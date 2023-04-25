@@ -36,13 +36,14 @@ export function DashBoard() {
           </div>
 
           <div className="card text-center mb-3">
-            <div className="card-body">
-              <h5 className="card-title">Administración de Prestaciones</h5>
-              <p className="card-text">
-                Administración de propuestas, agendas y personas.
-              </p>
-            </div>
-            <div></div>
+            <Link to={"/prestaciones"}>
+              <div className="card-body">
+                <h5 className="card-title">Administración de Prestaciones</h5>
+                <p className="card-text">
+                  Administración de propuestas, agendas y personas.
+                </p>
+              </div>
+            </Link>
           </div>
 
           <div className="card text-center mb-3">

@@ -1,0 +1,27 @@
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+export function Prestaciones() {
+ 
+
+  return (<div>
+    <Link to={"sucursales"}>
+    <button className="btn btn-primary">Sucursales</button>
+    </Link>
+    
+    <Link to={"propuestas"}>
+    <button className="btn btn-primary">Propuestas</button>
+    </Link>
+
+    <Link to={"prestadores"}>
+    <button className="btn btn-primary">Prestadores</button>
+    </Link>
+
+    <Link to={"generar-turnos"}>
+    <button className="btn btn-primary">Generar Turnos</button>
+    </Link>
+
+
+  </div>
+  );
+}

@@ -20,11 +20,13 @@
     "@types/node": "^18.15.3",
     "@types/react": "^18.0.28",
     "cross-env": "^7.0.3",
+    "express": "^4.18.2",
     "jspdf": "^2.5.1",
     "live-server": "^1.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
-    "react-router-dom": "^6.10.0"
+    "react-router-dom": "^6.10.0",
+    "sequelize": "^6.31.0"
   }
 }

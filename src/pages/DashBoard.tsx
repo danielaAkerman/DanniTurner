@@ -35,25 +35,27 @@ export function DashBoard() {
             </div>
           </div>
 
-          <div className="card text-center mb-3">
-            <Link to={"/prestaciones"}>
+          <Link to={"/prestaciones"}>
+            <div className="card text-center mb-3">
               <div className="card-body">
                 <h5 className="card-title">Administración de Prestaciones</h5>
                 <p className="card-text">
                   Administración de propuestas, agendas y personas.
                 </p>
               </div>
-            </Link>
-          </div>
-
-          <div className="card text-center mb-3">
-            <div className="card-body">
-              <h5 className="card-title">Usuarios de sistema</h5>
-              <p className="card-text">
-                Administración de datos y permisos de usuarios.
-              </p>
             </div>
-          </div>
+          </Link>
+
+          <Link to={"/usuarios"}>
+            <div className="card text-center mb-3">
+              <div className="card-body">
+                <h5 className="card-title">Usuarios de sistema</h5>
+                <p className="card-text">
+                  Administración de datos y permisos de usuarios.
+                </p>
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

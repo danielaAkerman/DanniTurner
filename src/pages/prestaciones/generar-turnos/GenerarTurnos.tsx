@@ -10,38 +10,12 @@ export function GenerarTurnos() {
     e.preventDefault();
     console.log("submited duracion");
   }
-  function aceptarSeleccion() {
-    const tablaContainer = document.querySelector(".turnos-provisorios")!;
-    tablaContainer.innerHTML = `
-    <h3>Los turnos que van a generarse son:</h3>
+  // function aceptarSeleccion() {
+  //   const tablaContainer = document.querySelector(".turnos-provisorios")!;
+  //   tablaContainer.innerHTML = `
 
-
-    <table className="table">
-  <thead>
-    <tr>
-      <th scope="col">Propuesta</th>
-      <th scope="col">Prestador</th>
-      <th scope="col">Fecha</th>
-      <th scope="col">Hora</th>
-      <th scope="col">Eliminar</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Obstetricia</td>
-      <td>Izquierdo César</td>
-      <td>14/06/2023</td>
-      <td>16:00 hs</td>
-      <td>x</td>
-    </tr>
-    
-  </tbody>
-</table>
-
-<button className="btn btn-primary">Aceptar y generar estos turnos</button>
-<button className="btn btn-outline-primary">Deshacer la operación</button>
-    `;
-  }
+  //   `;
+  // }
   return (
     <div>
       <h1>GenerarTurnos</h1>
@@ -293,10 +267,35 @@ export function GenerarTurnos() {
             data-bs-parent="#accordionFlushExample"
           >
             <div className="accordion-body">
-              <button className="btn btn-primary" onClick={aceptarSeleccion}>
-                ACEPTAR SELECCIÓN
+              <h3>Los turnos que van a generarse son:</h3>
+
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Propuesta</th>
+                    <th scope="col">Prestador</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Hora</th>
+                    <th scope="col">Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Obstetricia</td>
+                    <td>Izquierdo César</td>
+                    <td>14/06/2023</td>
+                    <td>16:00 hs</td>
+                    <td>x</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <button className="btn btn-primary">
+                Aceptar y generar estos turnos
               </button>
-              <div className="turnos-provisorios"></div>
+              <button className="btn btn-outline-primary">
+                Deshacer la operación
+              </button>
             </div>
           </div>
         </div>

@@ -23,6 +23,8 @@ import { NuevoPrestador } from "pages/prestaciones/prestadores/NuevoPrestador";
 import { DatosPrestador } from "pages/prestaciones/prestadores/DatosPrestador";
 import { AgendaPrestador } from "pages/prestaciones/prestadores/AgendaPrestador";
 import { Usuarios } from "pages/usuarios";
+import { NuevoUsuario } from "pages/usuarios/NuevoUsuario";
+import { EditarUsuario } from "pages/usuarios/EditarUsuario";
 
 function AppRoutes() {
   return (
@@ -76,6 +78,8 @@ function AppRoutes() {
         />
 
         <Route path="/usuarios" element={<Usuarios />} />
+        <Route path="/nuevo-usuario" element={<NuevoUsuario />} />
+        <Route path="/editar-usuario" element={<EditarUsuario />} />
 
         
       </Route>

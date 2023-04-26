@@ -12,9 +12,7 @@ export function BuscarCliente() {
 
     // LOGICA PARA BUSCAR UN CLIENTE
 
-    document.querySelector(
-      "#lista-clientes"
-    ).innerHTML = `
+    document.querySelector("#lista-clientes").innerHTML = `
 
     <table class="table table-striped">
   <thead>
@@ -99,8 +97,20 @@ export function BuscarCliente() {
           </div>
           <br />
 
-          <button className="btn btn-primary">BUSCAR</button>
+          <button type="submit" className="btn btn-primary">
+            Buscar Cliente
+          </button>
         </form>
+        <div>
+          <br />
+          <hr />
+          <br />
+          <Link to={"/nuevo-cliente"}>
+            <button type="button" className="btn btn-success">
+              Registrar Nuevo Cliente
+            </button>
+          </Link>
+        </div>
       </div>
       <div id="lista-clientes"></div>
     </div>

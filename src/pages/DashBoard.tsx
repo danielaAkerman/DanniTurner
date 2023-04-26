@@ -9,13 +9,15 @@ export function DashBoard() {
       <div className="container text-center">
         <div className="row align-items-start">
           {/* <button>Atención al Cliente</button> */}
+
+          <Link to={"/buscar-cliente"}>
           <div className="card text-center mb-3">
             <div className="card-body">
               <h5 className="card-title">Atención al Cliente</h5>
               <p className="card-text">
                 Nuevos turnos, modificaciones y cancelaciones. Datos de clientes
               </p>
-              <div
+              {/* <div
                 className="text-center"
                 style={{
                   display: "flex",
@@ -24,16 +26,17 @@ export function DashBoard() {
                   alignItems: "center",
                   justifyContent: "center",
                 }}
-              >
-                <Link to={"/buscar-cliente"}>
+              > */}
+                {/* <Link to={"/buscar-cliente"}>
                   <button className="btn btn-success">Buscar Cliente</button>
                 </Link>
                 <Link to={"/nuevo-cliente"}>
                   <button className="btn btn-success">Nuevo Cliente</button>
-                </Link>
-              </div>
+                </Link> */}
+              {/* </div> */}
             </div>
           </div>
+          </Link>
 
           <Link to={"/prestaciones"}>
             <div className="card text-center mb-3">

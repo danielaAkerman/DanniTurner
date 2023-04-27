@@ -21,6 +21,8 @@
     "@types/react": "^18.0.28",
     "cross-env": "^7.0.3",
     "express": "^4.18.2",
+    "firebase": "^9.21.0",
+    "firebase-tools": "^11.29.1",
     "jspdf": "^2.5.1",
     "live-server": "^1.2.2",
     "react": "^18.2.0",

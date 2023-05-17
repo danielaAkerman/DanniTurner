@@ -1,12 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { Layout } from "components/Layout";
-import { Search } from "pages/Search";
 import { LoginPage } from "pages/LoginPage";
 import { DashBoard } from "pages/DashBoard";
 import { BuscarCliente } from "pages/clientes/BuscarCliente";
 import { NuevoCliente } from "pages/clientes/NuevoCliente";
-import { Form } from "Form";
 import { DetallesTurno } from "pages/clientes/DetallesTurno";
 import { ClienteSeleccionado } from "pages/clientes/ClienteSeleccionado";
 import { VerTurnos } from "pages/clientes/VerTurnos";
@@ -80,11 +78,7 @@ function AppRoutes() {
         <Route path="/usuarios" element={<Usuarios />} />
         <Route path="/nuevo-usuario" element={<NuevoUsuario />} />
         <Route path="/editar-usuario" element={<EditarUsuario />} />
-
-        
       </Route>
-      <Route path="/search/:busqueda" element={<Search />} />
-      <Route path="/form" element={<Form />} />
     </Routes>
   );
 }

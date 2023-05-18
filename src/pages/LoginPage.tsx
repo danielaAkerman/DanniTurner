@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { useRecoilState } from "recoil";
+import { usernameState } from "atoms";
 
 export function LoginPage() {
+  const [username, setUsername] = useRecoilState(usernameState);
   const navigate = useNavigate();
   const {
     register,
@@ -12,6 +15,7 @@ export function LoginPage() {
   } = useForm();
 
   function submitted(data) {
+    setUsername(data.username);
     console.log("DATOS:", data);
     console.log("ERRORES", errors);
     console.log("Lógica validar si el usuario existe");
@@ -31,7 +35,7 @@ export function LoginPage() {
             <span>Usuario</span>
             <input
               className="form-control"
-              {...register("usuario", { required: true })}
+              {...register("username", { required: true })}
             />
             {errors.usuario && <span>El usuario es requerido</span>}
           </label>

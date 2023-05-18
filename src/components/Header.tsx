@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import {useRecoilState} from "recoil"
+import {usernameState} from "../atoms"
 
 export function Header() {
+
+  const [username, setUsername]= useRecoilState(usernameState)
+  console.log(username)
+
   return (
     <div
       style={{
@@ -14,7 +20,7 @@ export function Header() {
       <div>DANNI TURNER</div>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <p>
-          Usuario: dakerman@verticall.com.ar
+          Usuario: {username}
           <br />
           Nivel: 3
           <br />

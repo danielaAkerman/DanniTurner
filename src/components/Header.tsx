@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import {useRecoilState} from "recoil"
-import {usernameState} from "../atoms"
+import { useRecoilValue } from "recoil";
+import { usernameState } from "../atoms";
 
 export function Header() {
-
-  const [username, setUsername]= useRecoilState(usernameState)
-  console.log(username)
+  const username = useRecoilValue(usernameState);
 
   return (
     <div

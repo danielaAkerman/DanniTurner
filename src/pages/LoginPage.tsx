@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 import { usernameState } from "atoms";
 
 export function LoginPage() {
-  const [username, setUsername] = useRecoilState(usernameState);
+  const username = useRecoilValue(usernameState);
   const navigate = useNavigate();
   const {
     register,
@@ -15,10 +15,7 @@ export function LoginPage() {
   } = useForm();
 
   function submitted(data) {
-    setUsername(data.username);
-    console.log("DATOS:", data);
-    console.log("ERRORES", errors);
-    console.log("Lógica validar si el usuario existe");
+
     // Lógica validar si el usuario existe
     navigate("/dashboard", { replace: true });
   }

@@ -13,10 +13,11 @@ export const userState = atom({
 export const usernameState = selector({
   key: "username",
   get: async ({ get }) => {
-    const res = await fetch(url_provisoria + "/users/" + id);
+    // const res = await fetch(url_provisoria + "/users/" + id);
 
-    const data = await res.json();
-    console.log(data);
-    return data.nombre;
+    // const data = await res.json();
+    // console.log(data);
+    // return data.nombre;
+    return "Dani hard"
   },
 });

@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import { useRecoilValue } from "recoil";
 import { usernameState } from "atoms";
 
+const url_db = "http://localhost:3001";
+
 export function LoginPage() {
   const username = useRecoilValue(usernameState);
   const navigate = useNavigate();
@@ -14,10 +16,28 @@ export function LoginPage() {
     formState: { errors },
   } = useForm();
 
-  function submitted(data) {
+  async function submitted(formData) {
+    // const userLogIn=await fetch (url_db+"/login")
 
-    // Lógica validar si el usuario existe
-    navigate("/dashboard", { replace: true });
+    const { username, password } = formData;
+
+    fetch(url_db + "/login", {
+      method: "post",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        if (data.message) {
+          console.log(data.message);
+        } else if (data) {
+          console.log("Se hizo sign-in:", data);
+        }
+      });
   }
 
   return (
@@ -51,11 +71,9 @@ export function LoginPage() {
           </label>
         </div>
 
-        {/* <Link to={"dashboard"}> */}
         <button type="submit" className="btn btn-primary">
           Ingresar
         </button>
-        {/* </Link> */}
       </form>
     </div>
   );
